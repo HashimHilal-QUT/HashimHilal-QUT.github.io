@@ -126,6 +126,7 @@
       .library-grid{grid-template-columns:repeat(2,1fr)} .capabilities{grid-template-columns:1fr} .cert-groups{grid-template-columns:1fr}
     }
     @media(max-width:620px){.library-grid{grid-template-columns:1fr} .stats{grid-template-columns:1fr 1fr}}
+    @media(max-width:900px){section[id]{scroll-margin-top:82px}}
 
     /* ===== DYNAMIC ENHANCEMENTS ===== */
     /* 1. Scroll reveal */
@@ -430,7 +431,7 @@ const revealObserver = new IntersectionObserver((entries) => {
       revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+}, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
 revealElements.forEach(el => revealObserver.observe(el));
 
 // 2. Animated counters
